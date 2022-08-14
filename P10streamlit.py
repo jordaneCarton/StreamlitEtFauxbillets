@@ -19,7 +19,7 @@ if uploaded_file is not None:
 if st.button('Lancer le calcul'):
      
     #ouverture du modèle de régression logistique
-    nom_fichier = 'model_final.sav'
+    nom_fichier = 'StreamlitEtFauxbillets/model_final.sav'
     loaded_model = pickle.load(open(nom_fichier, 'rb'))
     #calcul du modèle
     resultat = loaded_model.predict(df_res[["diagonal","height_left","height_right","margin_low","margin_up","length"]])
